@@ -3,16 +3,20 @@ const carrito = document.querySelector('#carrito');
 const listaCursos = document.querySelector('#lista-cursos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+const notificacion = document.querySelector('.numerito');
+// console.log(notificacion);
 let articulosCarrito = [];
+
 
 //Listeners
 cargarEventListeners();
 
 function cargarEventListeners() {
+
     //Cuando agregas un curso presionando "Agregar al Carrito"
     listaCursos.addEventListener('click', agregarCurso);
 
-    //Elimina cursos del carrito
+    //Elimina un curso del carrito
     carrito.addEventListener('click', eliminarCurso);
 
     //Vaciar el carrito
@@ -20,10 +24,12 @@ function cargarEventListeners() {
         // console.log('Vaciando carrito...')
         articulosCarrito = []; // reseteamos el array
         limpiarHTML(); //Eliminamos todo el HTML
-    })
+    });
 }
 
+
 //Funciones 
+
 
 function agregarCurso(e) {
     e.preventDefault();
@@ -82,6 +88,7 @@ function leerDatosCurso(curso) {
     // console.log(articulosCarrito);
 
     carritoHTML();
+    calcular();
 }
 
 //Elimina un curso del carrito
@@ -100,6 +107,8 @@ function eliminarCurso(e) {
         //console.log(articulosCarrito);
         carritoHTML(); // Iterar sobre el carrito y mostrar su HTML
     }
+    notificacion.innerHTML = articulosCarrito.length;
+    console.log(articulosCarrito);
 }
 
 // Muestra el carrito de compras en el HTML
@@ -128,6 +137,7 @@ function carritoHTML() {
         // Agrega del HTML del carrito en tbody
         contenedorCarrito.appendChild(row);
     });
+
 }
 // Elimina los cursos del tbody en el DOM
 function limpiarHTML() {
@@ -138,4 +148,24 @@ function limpiarHTML() {
     while (contenedorCarrito.firstChild) {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
     }
+
 }
+
+// function actualizar() {
+//     // let buscar = articulosCarrito.find((x) => x.cantidad === cantidad)
+//     // document.getElementById(notificacion).innerHTML = buscar.cantidad;
+//     // calcular();
+//     notificacion.innerHTML = articulosCarrito
+//         .map((x) => x.cantidad)
+//         .reduce((x, y) => x - y)
+
+// }
+
+function calcular() {
+    // console.log("desde actualizar");
+    notificacion.innerHTML = articulosCarrito
+        .map((x) => x.cantidad)
+        .reduce((x, y) => x + y, 0)
+};
+
+
