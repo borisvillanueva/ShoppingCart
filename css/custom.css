@@ -10,12 +10,12 @@ body {
     text-align: center;
     width: 3%;
     position: relative;
-    top: 40px;
-    left: 74%;
+    top: 44px;
+    left: 74.5%;
     cursor: pointer;
-    font-size: 22px;
-    background-color: rgb(243, 89, 89);
-    color: white;
+    font-size: 20px;
+    background-color: greenyellow;
+    color: grey;
     padding: 3px;
     border-radius: 100px;
 }
