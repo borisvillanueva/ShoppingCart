@@ -8,16 +8,15 @@ body {
 
 .numerito {
     text-align: center;
-    width: 3%;
     position: relative;
-    top: 44px;
-    left: 74.5%;
+    top: 41px;
+    left: 72.3%;
     cursor: pointer;
-    font-size: 20px;
-    background-color: greenyellow;
-    color: grey;
-    padding: 3px;
-    border-radius: 100px;
+    font-size: 15px;
+    background-color: rgb(240, 99, 99);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
 }
 
 

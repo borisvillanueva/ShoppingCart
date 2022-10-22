@@ -108,7 +108,7 @@ function eliminarCurso(e) {
         carritoHTML(); // Iterar sobre el carrito y mostrar su HTML
     }
     notificacion.innerHTML = articulosCarrito.length;
-    console.log(articulosCarrito);
+    // console.log(articulosCarrito);
 }
 
 // Muestra el carrito de compras en el HTML
