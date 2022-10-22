@@ -151,15 +151,6 @@ function limpiarHTML() {
 
 }
 
-// function actualizar() {
-//     // let buscar = articulosCarrito.find((x) => x.cantidad === cantidad)
-//     // document.getElementById(notificacion).innerHTML = buscar.cantidad;
-//     // calcular();
-//     notificacion.innerHTML = articulosCarrito
-//         .map((x) => x.cantidad)
-//         .reduce((x, y) => x - y)
-
-// }
 
 function calcular() {
     // console.log("desde actualizar");

@@ -8,17 +8,21 @@ body {
 
 .numerito {
     text-align: center;
-    position: relative;
-    top: 41px;
-    left: 72.3%;
+    position: absolute;
+    top: -15px;
+    left: 25%;
     cursor: pointer;
     font-size: 15px;
     background-color: rgb(240, 99, 99);
     color: white;
-    padding: 5px;
+    padding: 1px 8px 1px 8px;
     border-radius: 50%;
+    display: inline;
 }
 
+#img-carrito {
+    position: relative;
+}
 
 h2 {
     font-size: 3rem;
